@@ -1,13 +1,16 @@
 import express from "express";
 import cors from "cors";
 import switchRoute from "./routes/SwtichRoute.js";
+import dotenv from "dotenv"
+dotenv.config()
+import './utils/mqttClient.js'
 
 const app = express();
 
 // Allow React frontend
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.FRONTEND_URL,
     methods: ["GET", "POST"],
     credentials: true
   })
