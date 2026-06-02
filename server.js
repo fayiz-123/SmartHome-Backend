@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
-import switchRoute from "./routes/SwtichRoute.js";
+import switchRoute from "./routes/swtichRoute.js";
+import azanRoute from "./routes/azanRoute.js"
 import dotenv from "dotenv"
 dotenv.config()
 import './utils/mqttClient.js'
@@ -19,6 +20,7 @@ app.use(
 app.use(express.json());
 
 app.use("/api", switchRoute);
+app.use("/api",azanRoute)
 
 app.listen(5000, () => {
   console.log("Server running");
