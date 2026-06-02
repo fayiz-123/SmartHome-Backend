@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import switchRoute from "./routes/swtichRoute.js";
+import switchRoute from "./routes/switchRoute.js";
 import azanRoute from "./routes/azanRoute.js"
 import dotenv from "dotenv"
 dotenv.config()
